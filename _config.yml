@@ -103,3 +103,7 @@ facebook_like: false
 # duoshuo comments
 duoshuo_comments: true
 duoshuo_short_name: gongzhenhua
+
+#share                                                                                      
+share: true 
+
