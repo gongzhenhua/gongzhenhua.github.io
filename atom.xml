@@ -4,7 +4,7 @@
   <title><![CDATA[Gongzhenhua's Blog]]></title>
   <link href="http://gongzhenhua.github.io/atom.xml" rel="self"/>
   <link href="http://gongzhenhua.github.io/"/>
-  <updated>2014-06-23T18:05:43+08:00</updated>
+  <updated>2014-06-23T18:10:01+08:00</updated>
   <id>http://gongzhenhua.github.io/</id>
   <author>
     <name><![CDATA[gongzhenhua]]></name>
@@ -18,7 +18,9 @@
     <link href="http://gongzhenhua.github.io/blog/2014/06/23/welcome-to-my-blog/"/>
     <updated>2014-06-23T17:46:52+08:00</updated>
     <id>http://gongzhenhua.github.io/blog/2014/06/23/welcome-to-my-blog</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<h2>欢迎访问</h2>
+
+<p>您好！欢迎！！</p>
 ]]></content>
   </entry>
   
