@@ -3,9 +3,9 @@
 # ----------------------- #
 
 url: http://gongzhenhua.github.io
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+title: Gongzhenhua's Blog
+subtitle: God Bless You.
+author: gongzhenhua
 simple_search: https://www.google.com/search
 description:
 
@@ -99,3 +99,7 @@ google_analytics_tracking_id:
 
 # Facebook Like
 facebook_like: false
+
+# duoshuo comments
+duoshuo_comments: true
+duoshuo_short_name: gongzhenhua
