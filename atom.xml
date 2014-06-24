@@ -4,7 +4,7 @@
   <title><![CDATA[Gongzhenhua's Blog]]></title>
   <link href="http://gongzhenhua.github.io/atom.xml" rel="self"/>
   <link href="http://gongzhenhua.github.io/"/>
-  <updated>2014-06-24T16:32:32+08:00</updated>
+  <updated>2014-06-24T16:37:24+08:00</updated>
   <id>http://gongzhenhua.github.io/</id>
   <author>
     <name><![CDATA[gongzhenhua]]></name>
@@ -52,11 +52,16 @@
 <p>下载完成，解压即可。这里以解压到F:\DevKit为例，
 打开cmd执行</p>
 
-<pre><code>F:
-cd DevKit
-ruby dk.rb init
-ruby dk.rb install
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="ss">F</span><span class="p">:</span>
+</span><span class='line'><span class="n">cd</span> <span class="no">DevKit</span>
+</span><span class='line'><span class="n">ruby</span> <span class="n">dk</span><span class="o">.</span><span class="n">rb</span> <span class="n">init</span>
+</span><span class='line'><span class="n">ruby</span> <span class="n">dk</span><span class="o">.</span><span class="n">rb</span> <span class="n">install</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <h3>4.配置Windows系统环境变量</h3>
 
@@ -66,9 +71,12 @@ ruby dk.rb install
 
 <p>有人说更新比较慢，我的没更换感觉也挺快的，打开cmd，执行：</p>
 
-<pre><code>gem sources -a http://ruby.taobao.org/
-gem sources -r http://rubygems.org/
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="n">sources</span> <span class="o">-</span><span class="n">a</span> <span class="ss">http</span><span class="p">:</span><span class="sr">//</span><span class="n">ruby</span><span class="o">.</span><span class="n">taobao</span><span class="o">.</span><span class="n">org</span><span class="o">/</span>
+</span><span class='line'><span class="n">gem</span> <span class="n">sources</span> <span class="o">-</span><span class="n">r</span> <span class="ss">http</span><span class="p">:</span><span class="sr">//</span><span class="n">rubygems</span><span class="o">.</span><span class="n">org</span><span class="o">/</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>环境基本上就搭好了，下面开始搭建博客。。</p>
 
@@ -120,7 +128,7 @@ Repository name 必须是 your_username.github.io (这里your_username替换成�
 $ git config --global user.email "your_email@your_email.com"
 </code></pre>
 
-<p>请自行替换 your_username 为 你注册的帐号，替换 <a href="&#109;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#x79;&#111;&#x75;&#114;&#x5f;&#101;&#109;&#x61;&#105;&#108;&#64;&#121;&#x6f;&#x75;&#x72;&#x5f;&#x65;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#x6f;&#109;">&#121;&#111;&#117;&#x72;&#x5f;&#x65;&#109;&#97;&#105;&#108;&#64;&#121;&#x6f;&#117;&#114;&#x5f;&#x65;&#109;&#97;&#105;&#108;&#46;&#x63;&#x6f;&#109;</a>
+<p>请自行替换 your_username 为 你注册的帐号，替换 <a href="&#109;&#97;&#x69;&#108;&#x74;&#x6f;&#58;&#121;&#x6f;&#x75;&#x72;&#95;&#101;&#x6d;&#x61;&#105;&#x6c;&#64;&#121;&#x6f;&#117;&#x72;&#95;&#x65;&#109;&#97;&#105;&#108;&#x2e;&#99;&#111;&#x6d;">&#121;&#x6f;&#x75;&#114;&#95;&#x65;&#x6d;&#x61;&#x69;&#x6c;&#64;&#x79;&#111;&#x75;&#114;&#95;&#101;&#109;&#x61;&#x69;&#x6c;&#x2e;&#99;&#111;&#x6d;</a>
 为 你验证的邮箱。</p>
 
 <h2>三、发布博客到Github</h2>
@@ -220,7 +228,7 @@ rake deploy
 <p>Octopress自带disqus评论系统，一般国内用的比较多的是多说<a href="http://duoshuo.com/">http://duoshuo.com/</a>
 获取代码 如下：</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -238,24 +246,25 @@ rake deploy
 <span class='line-number'>16</span>
 <span class='line-number'>17</span>
 <span class='line-number'>18</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;!-- 多说评论框 start --&gt;
-</span><span class='line'>&lt;div class="ds-thread" data-thread-key="唯一ID自己定义" data-title=" 文章标题"
-</span><span class='line'>data-url="文章Url"&gt;&lt;/div&gt;
-</span><span class='line'>&lt;!-- 多说评论框 end --&gt;
-</span><span class='line'>&lt;!-- 多说公共JS代码 start (一个网页只需插入一次) --&gt;
-</span><span class='line'>&lt;script type="text/javascript"&gt;
-</span><span class='line'>  var duoshuoQuery = {short_name:"gongzhenhua"};
-</span><span class='line'>  (function() {
-</span><span class='line'>      var ds = document.createElement('script');
-</span><span class='line'>      ds.type = 'text/javascript';ds.async = true;
-</span><span class='line'>      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') 
-</span><span class='line'>      + '//static.duoshuo.com/embed.js';
-</span><span class='line'>      ds.charset = 'UTF-8';
-</span><span class='line'>      (document.getElementsByTagName('head')[0] 
-</span><span class='line'>       || document.getElementsByTagName('body')[0]).appendChild(ds);
-</span><span class='line'>  })();
-</span><span class='line'>&lt;/script&gt;
-</span><span class='line'>&lt;!-- 多说公共JS代码 end --&gt;</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c">&lt;!--</span> <span class="err">多说评论框</span> <span class="nx">start</span> <span class="o">--&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;ds-thread&quot;</span> <span class="nx">data</span><span class="o">-</span><span class="nx">thread</span><span class="o">-</span><span class="nx">key</span><span class="o">=</span><span class="s2">&quot;唯一ID自己定义&quot;</span> <span class="nx">data</span><span class="o">-</span><span class="nx">title</span><span class="o">=</span><span class="s2">&quot; 文章标题&quot;</span>
+</span><span class='line'><span class="nx">data</span><span class="o">-</span><span class="nx">url</span><span class="o">=</span><span class="s2">&quot;文章Url&quot;</span><span class="o">&gt;&lt;</span><span class="err">/div&gt;</span>
+</span><span class='line'><span class="c">&lt;!--</span> <span class="err">多说评论框</span> <span class="nx">end</span> <span class="o">--&gt;</span>
+</span><span class='line'><span class="c">&lt;!--</span> <span class="err">多说公共</span><span class="nx">JS</span><span class="err">代码</span> <span class="nx">start</span> <span class="p">(</span><span class="err">一个网页只需插入一次</span><span class="p">)</span> <span class="o">--&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">duoshuoQuery</span> <span class="o">=</span> <span class="p">{</span><span class="nx">short_name</span><span class="o">:</span><span class="s2">&quot;gongzhenhua&quot;</span><span class="p">};</span>
+</span><span class='line'>  <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>      <span class="kd">var</span> <span class="nx">ds</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">);</span>
+</span><span class='line'>      <span class="nx">ds</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="s1">&#39;text/javascript&#39;</span><span class="p">;</span><span class="nx">ds</span><span class="p">.</span><span class="nx">async</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</span><span class='line'>      <span class="nx">ds</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">protocol</span> <span class="o">==</span> <span class="s1">&#39;https:&#39;</span> <span class="o">?</span> <span class="s1">&#39;https:&#39;</span> <span class="o">:</span> <span class="s1">&#39;http:&#39;</span><span class="p">)</span>
+</span><span class='line'>      <span class="o">+</span> <span class="s1">&#39;//static.duoshuo.com/embed.js&#39;</span><span class="p">;</span>
+</span><span class='line'>      <span class="nx">ds</span><span class="p">.</span><span class="nx">charset</span> <span class="o">=</span> <span class="s1">&#39;UTF-8&#39;</span><span class="p">;</span>
+</span><span class='line'>      <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;head&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</span><span class='line'>       <span class="o">||</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;body&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]).</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">ds</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">})();</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/script&gt;</span>
+</span><span class='line'><span class="c">&lt;!--</span> <span class="err">多说公共</span><span class="nx">JS</span><span class="err">代码</span> <span class="nx">end</span> <span class="o">--&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>打开目录Octopress\source_includes\post，创建duoshuo.html，把上面代码粘贴。
@@ -278,38 +287,20 @@ rake deploy
 
 <p>后面加入多说的布局，如下：</p>
 
-<pre><code>  &lt;section&gt;
-    &lt;h1&gt;Comments&lt;/h1&gt;
-    &lt;div id="comments" aria-live="polite"&gt;&lt;!-- 多说评论框 start --&gt;
-&lt;div class="ds-thread" data-thread-key="2014-06-23-welcome-to-my-blog" data-title=" Welcome to my blog" data-url="http://gongzhenhua.github.io/blog/2014/06/23/welcome-to-my-blog/"&gt;&lt;/div&gt;
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="p">{</span><span class="o">%</span> <span class="k">if</span> <span class="nx">site</span><span class="p">.</span><span class="nx">duoshuo_short_name</span> <span class="nx">and</span> <span class="nx">site</span><span class="p">.</span><span class="nx">duoshuo_comments</span> <span class="o">==</span> <span class="kc">true</span> <span class="nx">and</span> <span class="nx">page</span><span class="p">.</span><span class="nx">comments</span> <span class="o">==</span> <span class="kc">true</span> <span class="o">%</span><span class="p">}</span>
+</span><span class='line'>  <span class="o">&lt;</span><span class="nx">section</span><span class="o">&gt;</span>
+</span><span class='line'>  <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Comments</span><span class="o">&lt;</span><span class="err">/h1&gt;</span>
+</span><span class='line'>  <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="s2">&quot;comments&quot;</span> <span class="nx">aria</span><span class="o">-</span><span class="nx">live</span><span class="o">=</span><span class="s2">&quot;polite&quot;</span><span class="o">&gt;</span><span class="p">{</span><span class="o">%</span> <span class="nx">include</span> <span class="nx">post</span><span class="o">/</span><span class="nx">duoshuo</span><span class="p">.</span><span class="nx">html</span> <span class="o">%</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span><span class='line'>  <span class="o">&lt;</span><span class="err">/section&gt;</span>
+</span><span class='line'><span class="p">{</span><span class="o">%</span> <span class="nx">endif</span> <span class="o">%</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<!-- 多说评论框 end -->
-
-
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-
-
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"gongzhenhua"};
-    (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0] 
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-    </script>
-
-
-<!-- 多说公共JS代码 end -->
-
-
-<p></div></p>
-
-<pre><code>  &lt;/section&gt;
-</code></pre>
 
 <p>打开Octopress目录，打开_config.yml，在末尾添加多说的配置代码，如果想关闭评论，把true改为false即可。</p>
 
@@ -340,28 +331,16 @@ duoshuo_short_name: your_short_name
 <p>打开目录Octopress\source_includes\post，创建jiathis.html，把上面代码粘贴。
 打开目录Octopress\source_includes\post，打开sharing.html，添加如下代码：</p>
 
-<pre><code>  &lt;h2&gt;Share&lt;/h2&gt;  
-      &lt;!-- JiaThis Button BEGIN --&gt;
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="p">{</span><span class="o">%</span> <span class="k">if</span> <span class="nx">site</span><span class="p">.</span><span class="nx">share</span> <span class="o">%</span><span class="p">}</span>
+</span><span class='line'>  <span class="o">&lt;</span><span class="nx">h2</span><span class="o">&gt;</span><span class="nx">Share</span><span class="o">&lt;</span><span class="err">/h2&gt;  </span>
+</span><span class='line'>    <span class="p">{</span><span class="o">%</span> <span class="nx">include</span> <span class="nx">post</span><span class="o">/</span><span class="nx">jiathis</span><span class="p">.</span><span class="nx">html</span> <span class="o">%</span><span class="p">}</span>
+</span><span class='line'><span class="p">{</span><span class="o">%</span> <span class="nx">endif</span> <span class="o">%</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<div class="jiathis_style_32x32">
-    <a class="jiathis_button_qzone"></a>
-    <a class="jiathis_button_tsina"></a>
-    <a class="jiathis_button_tqq"></a>
-    <a class="jiathis_button_weixin"></a>
-    <a class="jiathis_button_renren"></a>
-    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
-    <a class="jiathis_counter_style"></a>
-</div>
-
-
-<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1401950585669651" charset="utf-8"></script>
-
-
-<!-- JiaThis Button END -->
-
-
-<p></p>
 
 <p>第二行修改: if site.twitter_tweet_button and false 屏蔽自带分享功能。
 打开Octopress目录，打开_config.yml，在末尾添加分享的配置代码：、</p>
