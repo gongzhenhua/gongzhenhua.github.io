@@ -4,7 +4,7 @@
   <title><![CDATA[Gongzhenhua's Blog]]></title>
   <link href="http://gongzhenhua.github.io/atom.xml" rel="self"/>
   <link href="http://gongzhenhua.github.io/"/>
-  <updated>2014-06-24T15:13:54+08:00</updated>
+  <updated>2014-06-24T15:18:37+08:00</updated>
   <id>http://gongzhenhua.github.io/</id>
   <author>
     <name><![CDATA[gongzhenhua]]></name>
@@ -214,9 +214,7 @@ rake deploy
 &lt;!-- 多说公共JS代码 end --&gt;
 打开目录Octopress\source\_includes\post，创建duoshuo.html，把上面代码粘贴。
 打开目录Octopress\source\_layouts，打开post.html，在disqus布局，如下：
-    &lt;code&gt;
-
-    &lt;/code&gt;
+    ''
 后面加入多说的布局，如下：
 
   &lt;section&gt;
