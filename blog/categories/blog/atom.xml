@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Blog | Gongzhenhua's Blog]]></title>
   <link href="http://gongzhenhua.github.io/blog/categories/blog/atom.xml" rel="self"/>
   <link href="http://gongzhenhua.github.io/"/>
-  <updated>2014-06-24T16:01:34+08:00</updated>
+  <updated>2014-06-24T16:04:16+08:00</updated>
   <id>http://gongzhenhua.github.io/</id>
   <author>
     <name><![CDATA[gongzhenhua]]></name>
@@ -120,7 +120,7 @@ Repository name 必须是 your_username.github.io (这里your_username替换成�
 $ git config --global user.email "your_email@your_email.com"
 </code></pre>
 
-<p>请自行替换 your_username 为 你注册的帐号，替换 <a href="&#109;&#97;&#105;&#108;&#116;&#x6f;&#58;&#x79;&#111;&#117;&#114;&#x5f;&#101;&#x6d;&#x61;&#105;&#108;&#x40;&#121;&#x6f;&#x75;&#x72;&#95;&#x65;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#99;&#111;&#x6d;">&#121;&#x6f;&#117;&#114;&#x5f;&#x65;&#109;&#x61;&#105;&#108;&#x40;&#121;&#111;&#x75;&#114;&#95;&#x65;&#x6d;&#x61;&#x69;&#x6c;&#46;&#x63;&#x6f;&#x6d;</a>
+<p>请自行替换 your_username 为 你注册的帐号，替换 <a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#121;&#111;&#x75;&#x72;&#x5f;&#101;&#109;&#97;&#x69;&#x6c;&#x40;&#x79;&#x6f;&#x75;&#x72;&#95;&#101;&#x6d;&#x61;&#x69;&#108;&#x2e;&#99;&#x6f;&#x6d;">&#x79;&#111;&#x75;&#114;&#95;&#101;&#x6d;&#97;&#x69;&#108;&#x40;&#x79;&#x6f;&#117;&#x72;&#95;&#101;&#x6d;&#97;&#x69;&#108;&#46;&#x63;&#111;&#x6d;</a>
 为 你验证的邮箱。</p>
 
 <h2>三、发布博客到Github</h2>
@@ -243,22 +243,17 @@ data-url="文章Url"&gt;&lt;/div&gt;
 <p>打开目录Octopress\source_includes\post，创建duoshuo.html，把上面代码粘贴。
 打开目录Octopress\source_layouts，打开post.html，在disqus布局，如下：</p>
 
-<pre><code>\{% if site.disqus_short_name and page.comments == true %\}
+<pre><code>{   % if site.disqus_short_name and page.comments == true %   }
   &lt;section&gt;
     &lt;h1&gt;Comments&lt;/h1&gt;
-    &lt;div id="disqus_thread" aria-live="polite"&gt;\{% include post/disqus_thread.html %\}&lt;/div&gt;
+    &lt;div id="disqus_thread" aria-live="polite"&gt;{   % include post/disqus_thread.html %   }&lt;/div&gt;
   &lt;/section&gt;
-\{% endif %\}
+{   % endif %   }
 </code></pre>
 
 <p>后面加入多说的布局，如下：</p>
 
-<pre><code>{% if site.duoshuo_short_name and site.duoshuo_comments == true and page.comments == true %}
-  &lt;section&gt;
-    &lt;h1&gt;Comments&lt;/h1&gt;
-    &lt;div id="comments" aria-live="polite"&gt;{% include post/duoshuo.html %}&lt;/div&gt;
-  &lt;/section&gt;
-{% endif %}
+<pre><code>
 </code></pre>
 
 <p>打开Octopress目录，打开_config.yml，在末尾添加多说的配置代码，如果想关闭评论，把true改为false即可。</p>
@@ -290,10 +285,21 @@ duoshuo_short_name: your_short_name
 <p>打开目录Octopress\source_includes\post，创建jiathis.html，把上面代码粘贴。
 打开目录Octopress\source_includes\post，打开sharing.html，添加如下代码：</p>
 
-<pre><code>{% if site.share %}  
+<pre><code>  
   &lt;h2&gt;Share&lt;/h2&gt;  
-      {% include post/jiathis.html %}  
-{% endif %}  
+      <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_32x32">
+	<a class="jiathis_button_qzone"></a>
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_tqq"></a>
+	<a class="jiathis_button_weixin"></a>
+	<a class="jiathis_button_renren"></a>
+	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1401950585669651" charset="utf-8"></script>
+<!-- JiaThis Button END -->  
+  
 </code></pre>
 
 <p>第二行修改: if site.twitter_tweet_button and false 屏蔽自带分享功能。
