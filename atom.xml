@@ -4,7 +4,7 @@
   <title><![CDATA[Gongzhenhua's Blog]]></title>
   <link href="http://gongzhenhua.github.io/atom.xml" rel="self"/>
   <link href="http://gongzhenhua.github.io/"/>
-  <updated>2014-06-24T16:37:24+08:00</updated>
+  <updated>2014-06-24T16:45:33+08:00</updated>
   <id>http://gongzhenhua.github.io/</id>
   <author>
     <name><![CDATA[gongzhenhua]]></name>
@@ -42,8 +42,10 @@
 <p>一般推荐的版本Ruby1.9.3以上，安装时勾选 Add Ruby executables to your PATH。
 将Ruby加入系统环境变量，完成后打开cmd执行：</p>
 
-<pre><code>ruby-v 
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">ruby</span> <span class="o">-</span><span class="n">v</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>输出版本号表示成功。</p>
 
@@ -86,15 +88,23 @@
 
 <p>找一个存放Octopress的目录，打开Git Bash（右键鼠标应该可以看到），执行：</p>
 
-<pre><code>git clone git://github.com/imathis/octopress.git
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="nb">clone</span> <span class="ss">git</span><span class="p">:</span><span class="sr">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">imathis</span><span class="o">/</span><span class="n">octopress</span><span class="o">.</span><span class="n">git</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>完成之后，执行：</p>
 
-<pre><code>cd octopress
-gem install bundler
-bundle install
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">cd</span> <span class="n">octopress</span>
+</span><span class='line'><span class="n">gem</span> <span class="n">install</span> <span class="n">bundler</span>
+</span><span class='line'><span class="n">bundle</span> <span class="n">install</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
 
 <h3>2.创建Github Repository</h3>
 
@@ -108,8 +118,10 @@ Repository name 必须是 your_username.github.io (这里your_username替换成�
 <p>绑定Github与本地电脑，不用每次都输入用户名密码，如果不设置，后面可能出现错误。
 首先，本地创建一个SSH key ， 打开cmd执行：</p>
 
-<pre><code>ssh-keygen -t rsa -C"your_email@your_email.com" 
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">ssh</span><span class="o">-</span><span class="n">keygen</span> <span class="o">-</span><span class="n">t</span> <span class="n">rsa</span> <span class="o">-</span><span class="n">C</span><span class="s2">&quot;your_email@your_email.com&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>（就是你的邮箱啊）
 按照提示输入即可。完成之后，到c:\Users\用户名.ssh\目录找到id_rsa.pub，并用文本编辑打开复制全部。</p>
@@ -119,16 +131,21 @@ Repository name 必须是 your_username.github.io (这里your_username替换成�
 
 <p>最后，测试一下。打开cmd执行：</p>
 
-<pre><code>ssh -T git@github.com 
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">ssh</span> <span class="o">-</span><span class="n">T</span> <span class="n">git</span><span class="vi">@github</span><span class="o">.</span><span class="n">com</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <h3>4.设置个人信息</h3>
 
-<pre><code>$ git config --global user.name "your_username"
-$ git config --global user.email "your_email@your_email.com"
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="n">global</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="s2">&quot;your_username&quot;</span>
+</span><span class='line'><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="n">global</span> <span class="n">user</span><span class="o">.</span><span class="n">email</span> <span class="s2">&quot;your_email@your_email.com&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<p>请自行替换 your_username 为 你注册的帐号，替换 <a href="&#109;&#97;&#x69;&#108;&#x74;&#x6f;&#58;&#121;&#x6f;&#x75;&#x72;&#95;&#101;&#x6d;&#x61;&#105;&#x6c;&#64;&#121;&#x6f;&#117;&#x72;&#95;&#x65;&#109;&#97;&#105;&#108;&#x2e;&#99;&#111;&#x6d;">&#121;&#x6f;&#x75;&#114;&#95;&#x65;&#x6d;&#x61;&#x69;&#x6c;&#64;&#x79;&#111;&#x75;&#114;&#95;&#101;&#109;&#x61;&#x69;&#x6c;&#x2e;&#99;&#111;&#x6d;</a>
+
+<p>请自行替换 your_username 为 你注册的帐号，替换 <a href="&#109;&#97;&#105;&#108;&#x74;&#x6f;&#58;&#x79;&#111;&#x75;&#x72;&#95;&#x65;&#x6d;&#x61;&#105;&#x6c;&#64;&#x79;&#111;&#117;&#x72;&#x5f;&#x65;&#109;&#x61;&#105;&#x6c;&#x2e;&#x63;&#111;&#x6d;">&#121;&#x6f;&#x75;&#x72;&#95;&#101;&#109;&#x61;&#105;&#x6c;&#64;&#x79;&#111;&#x75;&#x72;&#x5f;&#x65;&#109;&#x61;&#x69;&#x6c;&#46;&#x63;&#x6f;&#109;</a>
 为 你验证的邮箱。</p>
 
 <h2>三、发布博客到Github</h2>
@@ -137,8 +154,10 @@ $ git config --global user.email "your_email@your_email.com"
 
 <p>打开Git Bash，进入octopress目录，执行：</p>
 
-<pre><code>rake setup_github_pages
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="n">setup_github_pages</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>根据提示输入Repository Url：git@github.com:your_username/your_username.github.io.git
 自行替换 your_username</p>
@@ -148,20 +167,26 @@ $ git config --global user.email "your_email@your_email.com"
 
 <h3>2.安装Octopress主题</h3>
 
-<pre><code>rake install
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="n">install</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>这是安装默认主题，也可以克隆其他主题。</p>
 
 <h3>3.生成静态页面</h3>
 
-<pre><code>rake generate
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="n">generate</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <h3>4.本地预览</h3>
 
-<pre><code>rake preview
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="n">preview</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>在浏览器输入地址：<a href="http://localhost:4000/">http://localhost:4000/</a>
 打开本地预览，也可跳过预览。
@@ -169,8 +194,10 @@ Ctrl + C 停止预览</p>
 
 <h3>5.提交到Github</h3>
 
-<pre><code>rake deploy
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="n">deploy</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>提交_deploy里的文件到Github的master分支，source分支默认不提交。</p>
 
@@ -188,10 +215,14 @@ Ctrl + C 停止预览</p>
 
 <p>Github本来就是源代码管理的，提交source分支</p>
 
-<pre><code>git add .
-git commit -m "your tag"
-git push origin source 
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
+</span><span class='line'><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;your tag&quot;</span>
+</span><span class='line'><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">source</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <h2>四、配置博客</h2>
 
@@ -201,27 +232,40 @@ git push origin source
 打开F:\Ruby193\lib\ruby\gems\1.9.1\gems\jekyll-2.0.3\lib\jekyll\convertible.rb
 修改46行上下为下面的样子：</p>
 
-<pre><code> begin
-    self.content = File.read(File.join(base,name),:encoding=&gt;"utf-8")
-    if content =~ /\A(---\s*\n.*?\n?)^((---|\.\.\.)\s*$\n?)/m
-      self.content = $POSTMATCH
-      self.data = SafeYAML.load($1)
-    end
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'> <span class="nx">begin</span>
+</span><span class='line'>    <span class="nx">self</span><span class="p">.</span><span class="nx">content</span> <span class="o">=</span> <span class="nx">File</span><span class="p">.</span><span class="nx">read</span><span class="p">(</span><span class="nx">File</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">base</span><span class="p">,</span><span class="nx">name</span><span class="p">),</span><span class="o">:</span><span class="nx">encoding</span><span class="o">=&gt;</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">if</span> <span class="nx">content</span> <span class="o">=~</span> <span class="sr">/\A(---\s*\n.*?\n?)^((---|\.\.\.)\s*$\n?)/m</span>
+</span><span class='line'>      <span class="nx">self</span><span class="p">.</span><span class="nx">content</span> <span class="o">=</span> <span class="nx">$POSTMATCH</span>
+</span><span class='line'>      <span class="nx">self</span><span class="p">.</span><span class="nx">data</span> <span class="o">=</span> <span class="nx">SafeYAML</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span><span class="nx">$1</span><span class="p">)</span>
+</span><span class='line'>    <span class="nx">end</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<p>有的版本还需要改别的地方，视情况而改。。</p>
+
+<p>   <br/>
+有的版本还需要改别的地方，视情况而改。。</p>
 
 <h3>2.新建博文</h3>
 
-<pre><code>rake new_post['bolg title']
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="n">new_post</span><span class="o">[</span><span class="s1">&#39;your bolg title&#39;</span><span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>这样在_posts文件夹下建立一个.markdown后缀的文件，文本编辑器打开可以改标题，
 写内容，语法自行学习，兼容html语法，我基本没用语法，就成这个样子了。</p>
 
-<pre><code>rake generate
-rake deploy
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="n">generate</span>
+</span><span class='line'><span class="n">rake</span> <span class="n">deploy</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <h3>3.添加评论功能</h3>
 
@@ -246,7 +290,7 @@ rake deploy
 <span class='line-number'>16</span>
 <span class='line-number'>17</span>
 <span class='line-number'>18</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c">&lt;!--</span> <span class="err">多说评论框</span> <span class="nx">start</span> <span class="o">--&gt;</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c">&lt;!--</span> <span class="err">多说评论框</span> <span class="nx">start</span> <span class="o">--&gt;</span>
 </span><span class='line'><span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;ds-thread&quot;</span> <span class="nx">data</span><span class="o">-</span><span class="nx">thread</span><span class="o">-</span><span class="nx">key</span><span class="o">=</span><span class="s2">&quot;唯一ID自己定义&quot;</span> <span class="nx">data</span><span class="o">-</span><span class="nx">title</span><span class="o">=</span><span class="s2">&quot; 文章标题&quot;</span>
 </span><span class='line'><span class="nx">data</span><span class="o">-</span><span class="nx">url</span><span class="o">=</span><span class="s2">&quot;文章Url&quot;</span><span class="o">&gt;&lt;</span><span class="err">/div&gt;</span>
 </span><span class='line'><span class="c">&lt;!--</span> <span class="err">多说评论框</span> <span class="nx">end</span> <span class="o">--&gt;</span>
@@ -293,7 +337,7 @@ rake deploy
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="p">{</span><span class="o">%</span> <span class="k">if</span> <span class="nx">site</span><span class="p">.</span><span class="nx">duoshuo_short_name</span> <span class="nx">and</span> <span class="nx">site</span><span class="p">.</span><span class="nx">duoshuo_comments</span> <span class="o">==</span> <span class="kc">true</span> <span class="nx">and</span> <span class="nx">page</span><span class="p">.</span><span class="nx">comments</span> <span class="o">==</span> <span class="kc">true</span> <span class="o">%</span><span class="p">}</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="p">{</span><span class="o">%</span> <span class="k">if</span> <span class="nx">site</span><span class="p">.</span><span class="nx">duoshuo_short_name</span> <span class="nx">and</span> <span class="nx">site</span><span class="p">.</span><span class="nx">duoshuo_comments</span> <span class="o">==</span> <span class="kc">true</span> <span class="nx">and</span> <span class="nx">page</span><span class="p">.</span><span class="nx">comments</span> <span class="o">==</span> <span class="kc">true</span> <span class="o">%</span><span class="p">}</span>
 </span><span class='line'>  <span class="o">&lt;</span><span class="nx">section</span><span class="o">&gt;</span>
 </span><span class='line'>  <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Comments</span><span class="o">&lt;</span><span class="err">/h1&gt;</span>
 </span><span class='line'>  <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="s2">&quot;comments&quot;</span> <span class="nx">aria</span><span class="o">-</span><span class="nx">live</span><span class="o">=</span><span class="s2">&quot;polite&quot;</span><span class="o">&gt;</span><span class="p">{</span><span class="o">%</span> <span class="nx">include</span> <span class="nx">post</span><span class="o">/</span><span class="nx">duoshuo</span><span class="p">.</span><span class="nx">html</span> <span class="o">%</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/div&gt;</span>
@@ -304,29 +348,46 @@ rake deploy
 
 <p>打开Octopress目录，打开_config.yml，在末尾添加多说的配置代码，如果想关闭评论，把true改为false即可。</p>
 
-<pre><code># duoshuo comments
-duoshuo_comments: true
-duoshuo_short_name: your_short_name
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="err">#</span> <span class="nx">duoshuo</span> <span class="nx">comments</span>
+</span><span class='line'><span class="nx">duoshuo_comments</span><span class="o">:</span> <span class="kc">true</span>
+</span><span class='line'><span class="nx">duoshuo_short_name</span><span class="o">:</span> <span class="nx">your_short_name</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <h3>4.添加分享功能</h3>
 
 <p>屏蔽掉Octopress自带的分享功能，采用加网分享<a href="http://www.jiathis.com">http://www.jiathis.com</a>
 获取代码，如下：</p>
 
-<pre><code>&lt;!-- JiaThis Button BEGIN --&gt;
-&lt;div class="jiathis_style_32x32"&gt;
-    &lt;a class="jiathis_button_qzone"&gt;&lt;/a&gt;
-    &lt;a class="jiathis_button_tsina"&gt;&lt;/a&gt;
-    &lt;a class="jiathis_button_tqq"&gt;&lt;/a&gt;
-    &lt;a class="jiathis_button_weixin"&gt;&lt;/a&gt;
-    &lt;a class="jiathis_button_renren"&gt;&lt;/a&gt;
-    &lt;a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"&gt;&lt;/a&gt;
-    &lt;a class="jiathis_counter_style"&gt;&lt;/a&gt;
-&lt;/div&gt;
-&lt;script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1401950585669651" charset="utf-8"&gt;&lt;/script&gt;
-&lt;!-- JiaThis Button END --&gt;
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c">&lt;!--</span> <span class="nx">JiaThis</span> <span class="nx">Button</span> <span class="nx">BEGIN</span> <span class="o">--&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;jiathis_style_32x32&quot;</span><span class="o">&gt;</span>
+</span><span class='line'>  <span class="o">&lt;</span><span class="nx">a</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;jiathis_button_qzone&quot;</span><span class="o">&gt;&lt;</span><span class="err">/a&gt;</span>
+</span><span class='line'>  <span class="o">&lt;</span><span class="nx">a</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;jiathis_button_tsina&quot;</span><span class="o">&gt;&lt;</span><span class="err">/a&gt;</span>
+</span><span class='line'>  <span class="o">&lt;</span><span class="nx">a</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;jiathis_button_tqq&quot;</span><span class="o">&gt;&lt;</span><span class="err">/a&gt;</span>
+</span><span class='line'>  <span class="o">&lt;</span><span class="nx">a</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;jiathis_button_weixin&quot;</span><span class="o">&gt;&lt;</span><span class="err">/a&gt;</span>
+</span><span class='line'>  <span class="o">&lt;</span><span class="nx">a</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;jiathis_button_renren&quot;</span><span class="o">&gt;&lt;</span><span class="err">/a&gt;</span>
+</span><span class='line'>  <span class="o">&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="o">=</span><span class="s2">&quot;http://www.jiathis.com/share&quot;</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;jiathis jiathis_txt jtico jtico_jiathis&quot;</span> <span class="nx">target</span><span class="o">=</span><span class="s2">&quot;_blank&quot;</span><span class="o">&gt;&lt;</span><span class="err">/a&gt;</span>
+</span><span class='line'>  <span class="o">&lt;</span><span class="nx">a</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;jiathis_counter_style&quot;</span><span class="o">&gt;&lt;</span><span class="err">/a&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;http://v3.jiathis.com/code/jia.js?uid=1401950585669651&quot;</span> <span class="nx">charset</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
+</span><span class='line'><span class="c">&lt;!--</span> <span class="nx">JiaThis</span> <span class="nx">Button</span> <span class="nx">END</span> <span class="o">--&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>打开目录Octopress\source_includes\post，创建jiathis.html，把上面代码粘贴。
 打开目录Octopress\source_includes\post，打开sharing.html，添加如下代码：</p>
@@ -343,20 +404,26 @@ duoshuo_short_name: your_short_name
 
 
 <p>第二行修改: if site.twitter_tweet_button and false 屏蔽自带分享功能。
-打开Octopress目录，打开_config.yml，在末尾添加分享的配置代码：、</p>
+打开Octopress目录，打开_config.yml，在末尾添加分享的配置代码：</p>
 
-<pre><code># share                                                                                      
-share: true 
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="err">#</span> <span class="nx">share</span>
+</span><span class='line'><span class="nx">share</span><span class="o">:</span> <span class="kc">true</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <h3>5.各种美化</h3>
 
 <p>至于其他功能及排版，自行研究吧。
 每次修改之后，执行：</p>
 
-<pre><code>rake generate
-rake deploy
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="n">generate</span>
+</span><span class='line'><span class="n">rake</span> <span class="n">deploy</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>才能显示。。</p>
 
