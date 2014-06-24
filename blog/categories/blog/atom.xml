@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Blog | Gongzhenhua's Blog]]></title>
   <link href="http://gongzhenhua.github.io/blog/categories/blog/atom.xml" rel="self"/>
   <link href="http://gongzhenhua.github.io/"/>
-  <updated>2014-06-24T14:44:00+08:00</updated>
+  <updated>2014-06-24T15:00:02+08:00</updated>
   <id>http://gongzhenhua.github.io/</id>
   <author>
     <name><![CDATA[gongzhenhua]]></name>
@@ -224,6 +224,52 @@ duoshuo_short_name: your_short_name
 </code></pre>
 
 <h3>4.添加分享功能</h3>
+
+<pre><code>屏蔽掉Octopress自带的分享功能，采用加网分享http://www.jiathis.com
+获取代码，如下：
+&lt;!-- JiaThis Button BEGIN --&gt;
+&lt;div class="jiathis_style_32x32"&gt;
+    &lt;a class="jiathis_button_qzone"&gt;&lt;/a&gt;
+    &lt;a class="jiathis_button_tsina"&gt;&lt;/a&gt;
+    &lt;a class="jiathis_button_tqq"&gt;&lt;/a&gt;
+    &lt;a class="jiathis_button_weixin"&gt;&lt;/a&gt;
+    &lt;a class="jiathis_button_renren"&gt;&lt;/a&gt;
+    &lt;a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"&gt;&lt;/a&gt;
+    &lt;a class="jiathis_counter_style"&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1401950585669651" charset="utf-8"&gt;&lt;/script&gt;
+&lt;!-- JiaThis Button END --&gt;
+打开目录Octopress\source\_includes\post，创建jiathis.html，把上面代码粘贴。
+打开目录Octopress\source\_includes\post，打开sharing.html，添加如下代码：
+    
+  &lt;h2&gt;Share&lt;/h2&gt;  
+      <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_32x32">
+	<a class="jiathis_button_qzone"></a>
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_tqq"></a>
+	<a class="jiathis_button_weixin"></a>
+	<a class="jiathis_button_renren"></a>
+	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1401950585669651" charset="utf-8"></script>
+<!-- JiaThis Button END -->  
+    
+第二行修改: if site.twitter_tweet_button and false 屏蔽自带分享功能。
+打开Octopress目录，打开_config.yml，在末尾添加分享的配置代码：、
+# share                                                                                      
+share: true 
+</code></pre>
+
+<h3>5.各种美化</h3>
+
+<pre><code>至于其他功能及排版，自行研究吧。
+每次修改之后，执行：
+rake generate
+rake deploy
+才能显示。。
+</code></pre>
 ]]></content>
   </entry>
   
