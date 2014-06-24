@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Blog | Gongzhenhua's Blog]]></title>
   <link href="http://gongzhenhua.github.io/blog/categories/blog/atom.xml" rel="self"/>
   <link href="http://gongzhenhua.github.io/"/>
-  <updated>2014-06-24T13:31:13+08:00</updated>
+  <updated>2014-06-24T14:44:00+08:00</updated>
   <id>http://gongzhenhua.github.io/</id>
   <author>
     <name><![CDATA[gongzhenhua]]></name>
@@ -96,8 +96,8 @@ Repository name 必须是 your_username.github.io (这里your_username替换成�
 ssh-keygen -t rsa -C"your_email@your_email.com" （就是你的邮箱啊）
 按照提示输入即可。完成之后，到c:\Users\用户名.ssh\目录找到id_rsa.pub，并用文本编辑打开复制全部。
 
-然后，到github网站右上角点击“Account settings”&gt;&gt;“SSH Keys”&gt;&gt;“Add SSH key”，将刚才复制的内容粘贴到key文本框内，
-Title任意。
+然后，到github网站右上角点击“Account settings”&gt;&gt;“SSH Keys”&gt;&gt;“Add SSH key”，将刚才复制的内容粘贴
+到key文本框内，Title任意。
 
 最后，测试一下。打开cmd执行：
 ssh -T git@github.com 
@@ -113,7 +113,117 @@ $ git config --global user.email "your_email@your_email.com"
 
 <h2>三、发布博客到Github</h2>
 
-<h3>1.先吃个饭，回来接着。。</h3>
+<h3>1.创建Github Pages</h3>
+
+<pre><code>打开Git Bash，进入octopress目录，执行：
+rake setup_github_pages
+根据提示输入Repository Url：git@github.com:your_username/your_username.github.io.git
+自行替换 your_username
+
+注意：这一步出现的问题，①找不到Repository，检查输入的Url或Github创建的仓库是否正确；
+②访问被拒绝，检查是否设置SSH keys。
+</code></pre>
+
+<h3>2.安装Octopress主题</h3>
+
+<pre><code>rake install
+这是安装默认主题，也可以克隆其他主题。
+</code></pre>
+
+<h3>3.生成静态页面</h3>
+
+<pre><code>rake generate
+</code></pre>
+
+<h3>4.本地预览</h3>
+
+<pre><code>rake preview
+在浏览器输入地址：http://localhost:4000/打开本地预览，也可跳过预览。
+Ctrl + C 停止预览
+</code></pre>
+
+<h3>5.提交到Github</h3>
+
+<pre><code>rake deploy
+提交_deploy里的文件到Github的master分支，source分支默认不提交。
+
+注意：这一步出现的问题，提交失败，一般是仓库的版本号跟本地的不一致，
+解决办法：先，git pull ，再 git push ，但是这个问题困扰我2天，终于找到
+原因了。
+原来，我把 Repository 克隆了一份在本地，而Octopress中_deploy中也是master
+分支，两个冲突了，按照此教程则不会出现此问题。
+
+这时候，在浏览器中输入 http://your_username.github.io 自行替换 your_username
+会看到404页面，第一次提交需要10分钟左右时间，等吧，我等了一个周末，周一发现
+终于出来了。。
+</code></pre>
+
+<h3>6.提交源代码</h3>
+
+<pre><code>Github本来就是源代码管理的，提交source分支
+git add .
+git commit -m "your tag"
+git push origin source 
+</code></pre>
+
+<h2>四、配置博客</h2>
+
+<h3>1.设置中文编码</h3>
+
+<pre><code>如果博客中有中文，需要修改编码格式
+打开F:\Ruby193\lib\ruby\gems\1.9.1\gems\jekyll-2.0.3\lib\jekyll\convertible.rb
+修改46行上下为下面的样子：
+ begin
+    self.content = File.read(File.join(base,name),:encoding=&gt;"utf-8")
+    if content =~ /\A(---\s*\n.*?\n?)^((---|\.\.\.)\s*$\n?)/m
+      self.content = $POSTMATCH
+      self.data = SafeYAML.load($1)
+    end
+
+有的版本还需要改别的地方，视情况而改。。
+</code></pre>
+
+<h3>2.新建博文</h3>
+
+<pre><code>rake new_post['bolg title']
+这样在_posts文件夹下建立一个.markdown后缀的文件，文本编辑器打开可以改标题，
+写内容，语法自行学习，兼容html语法，我基本没用语法，就成这个样子了。
+rake generate
+rake deploy
+</code></pre>
+
+<h3>3.添加评论功能</h3>
+
+<pre><code>Octopress自带disqus评论系统，一般国内用的比较多的是多说http://duoshuo.com/
+获取代码 如下：
+&lt;!-- 多说评论框 start --&gt;
+&lt;div class="ds-thread" data-thread-key="唯一ID自己定义" data-title=" 文章标题" data-url="文章Url"&gt;&lt;/div&gt;
+&lt;!-- 多说评论框 end --&gt;
+&lt;!-- 多说公共JS代码 start (一个网页只需插入一次) --&gt;
+&lt;script type="text/javascript"&gt;
+    var duoshuoQuery = {short_name:"gongzhenhua"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+&lt;/script&gt;
+&lt;!-- 多说公共JS代码 end --&gt;
+打开目录Octopress\source\_includes\post，创建duoshuo.html，把上面代码粘贴。
+打开目录Octopress\source\_layouts，打开post.html，在disqus布局，如下：
+
+后面加入多说的布局，如下：
+
+打开Octopress目录，打开_config.yml，在末尾添加多说的配置代码，如果想关闭评论，把true改为false即可。
+# duoshuo comments
+duoshuo_comments: true
+duoshuo_short_name: your_short_name
+</code></pre>
+
+<h3>4.添加分享功能</h3>
 ]]></content>
   </entry>
   
