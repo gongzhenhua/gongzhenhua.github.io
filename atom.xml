@@ -4,7 +4,7 @@
   <title><![CDATA[Gongzhenhua's Blog]]></title>
   <link href="http://gongzhenhua.github.io/atom.xml" rel="self"/>
   <link href="http://gongzhenhua.github.io/"/>
-  <updated>2014-06-24T16:29:45+08:00</updated>
+  <updated>2014-06-24T16:32:32+08:00</updated>
   <id>http://gongzhenhua.github.io/</id>
   <author>
     <name><![CDATA[gongzhenhua]]></name>
@@ -120,7 +120,7 @@ Repository name 必须是 your_username.github.io (这里your_username替换成�
 $ git config --global user.email "your_email@your_email.com"
 </code></pre>
 
-<p>请自行替换 your_username 为 你注册的帐号，替换 <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#x79;&#x6f;&#x75;&#114;&#x5f;&#x65;&#109;&#97;&#x69;&#108;&#x40;&#x79;&#x6f;&#x75;&#x72;&#95;&#101;&#x6d;&#97;&#105;&#108;&#46;&#x63;&#x6f;&#x6d;">&#x79;&#111;&#117;&#114;&#x5f;&#101;&#109;&#x61;&#105;&#x6c;&#x40;&#x79;&#111;&#117;&#114;&#95;&#x65;&#109;&#97;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#109;</a>
+<p>请自行替换 your_username 为 你注册的帐号，替换 <a href="&#109;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#x79;&#111;&#x75;&#114;&#x5f;&#101;&#109;&#x61;&#105;&#108;&#64;&#121;&#x6f;&#x75;&#x72;&#x5f;&#x65;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#x6f;&#109;">&#121;&#111;&#117;&#x72;&#x5f;&#x65;&#109;&#97;&#105;&#108;&#64;&#121;&#x6f;&#117;&#114;&#x5f;&#x65;&#109;&#97;&#105;&#108;&#46;&#x63;&#x6f;&#109;</a>
 为 你验证的邮箱。</p>
 
 <h2>三、发布博客到Github</h2>
@@ -267,7 +267,12 @@ rake deploy
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="p">{</span><span class="o">%</span> <span class="k">if</span> <span class="nx">site</span><span class="p">.</span><span class="nx">disqus_short_name</span> <span class="nx">and</span> <span class="nx">page</span><span class="p">.</span><span class="nx">comments</span> <span class="o">==</span> <span class="kc">true</span> <span class="o">%</span><span class="p">}</span>
+</span><span class='line'>  <span class="o">&lt;</span><span class="nx">section</span><span class="o">&gt;</span>
+</span><span class='line'>  <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Comments</span><span class="o">&lt;</span><span class="err">/h1&gt;</span>
+</span><span class='line'>  <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="s2">&quot;disqus_thread&quot;</span> <span class="nx">aria</span><span class="o">-</span><span class="nx">live</span><span class="o">=</span><span class="s2">&quot;polite&quot;</span><span class="o">&gt;</span><span class="p">{</span><span class="o">%</span> <span class="nx">include</span> <span class="nx">post</span><span class="o">/</span><span class="nx">disqus_thread</span><span class="p">.</span><span class="nx">html</span> <span class="o">%</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span><span class='line'>  <span class="o">&lt;</span><span class="err">/section&gt;</span>
+</span><span class='line'><span class="p">{</span><span class="o">%</span> <span class="nx">endif</span> <span class="o">%</span><span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
