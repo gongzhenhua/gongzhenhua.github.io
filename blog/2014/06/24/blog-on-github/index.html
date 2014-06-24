@@ -9,9 +9,8 @@
   <meta name="author" content="gongzhenhua">
 
   
-  <meta name="description" content="看了网上各种教程，都说很简单，我捣鼓了3天才整出来。
-期间遇到各种网上都找不到答案的问题，在此记录下过程，以便参考。 由于刚接触，Markdown语法也不是很清楚，估计写完排版会很丑。。 看到此教程，应该是对Github和Octopress有个大概的了解了，详细的介绍自己百度
-（ &hellip;">
+  <meta name="description" content="看了网上各种教程，都说很简单，我捣鼓了3天才整出来。 期间遇到各种网上都找不到答案的问题，在此记录下过程，以便参考。 由于刚接触，Markdown语法也不是很清楚，估计写完排版会很丑。。
+看到此教程，应该是对Github和Octopress有个大概的了解了，详 细的介绍自己百度（ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -94,28 +93,34 @@
   </header>
 
 
-<div class="entry-content"><p>看了网上各种教程，都说很简单，我捣鼓了3天才整出来。
-期间遇到各种网上都找不到答案的问题，在此记录下过程，以便参考。</p>
-
-<h2>由于刚接触，Markdown语法也不是很清楚，估计写完排版会很丑。。</h2>
-
-<p>看到此教程，应该是对Github和Octopress有个大概的了解了，详细的介绍自己百度
-（最近Google又上不去了？不喜欢翻墙）。下面开始，一步一步来应该是没问题的。</p>
-
-<h2>一、本地环境搭建（Win7 32 系统）</h2>
-
-<h1>1.安装Git</h1>
-
-<pre><code>windows 环境下 Git，百度 msysgit 自行下载，一步步Next即可。。
+<div class="entry-content"><pre><code>看了网上各种教程，都说很简单，我捣鼓了3天才整出来。
 </code></pre>
 
-<h1>2.安装Ruby</h1>
+<p>期间遇到各种网上都找不到答案的问题，在此记录下过程，以便参考。</p>
+
+<pre><code>由于刚接触，Markdown语法也不是很清楚，估计写完排版会很丑。。
+看到此教程，应该是对Github和Octopress有个大概的了解了，详
+</code></pre>
+
+<p>细的介绍自己百度（最近Google又上不去了？不喜欢翻墙）。</p>
+
+<pre><code>下面开始，一步一步来应该是没有问题的。&lt;!—more—&gt;
+</code></pre>
+
+<h2>一、本地环境搭建（Win7 32位系统）</h2>
+
+<h3>1.安装Git</h3>
+
+<pre><code>windows 环境下安装 Git，百度 msysgit 自行下载，一步步Next即可。。
+</code></pre>
+
+<h3>2.安装Ruby</h3>
 
 <pre><code>一般推荐的版本Ruby1.9.3以上，安装时勾选 Add Ruby executables to your PATH。
 将Ruby加入系统环境变量，完成后打开cmd执行：ruby-v 输出版本号表示成功。
 </code></pre>
 
-<h1>3.安装DevKit</h1>
+<h3>3.安装DevKit</h3>
 
 <pre><code>下载完成，解压即可。这里以解压到F:\DevKit为例，
 打开cmd执行 
@@ -125,12 +130,12 @@ ruby dk.rb init
 ruby dk.rb install
 </code></pre>
 
-<h1>4.配置Windows系统环境变量</h1>
+<h3>4.配置Windows系统环境变量</h3>
 
 <pre><code>为了支持UTF-8编码，开始-计算机-属性-高级系统设置，添加两个变量，LANG和LC_ALL，值都是 zh_CN.UTF-8
 </code></pre>
 
-<h1>5.更换Ruby更新源</h1>
+<h3>5.更换Ruby更新源</h3>
 
 <pre><code>有人说更新比较慢，我的没更换感觉也挺快的，打开cmd，执行：
 gem sources -a http://ruby.taobao.org/
@@ -141,7 +146,7 @@ gem sources -r http://rubygems.org/
 
 <h2>二、搭建博客系统</h2>
 
-<h1>1.克隆Octopress库</h1>
+<h3>1.克隆Octopress库</h3>
 
 <pre><code>找一个存放Octopress的目录，打开Git Bash（右键鼠标应该可以看到），执行：
 git clone git://github.com/imathis/octopress.git
@@ -152,7 +157,7 @@ gem install bundler
 bundle install
 </code></pre>
 
-<h1>2.创建Github Repository</h1>
+<h3>2.创建Github Repository</h3>
 
 <pre><code>没有Github得先注册帐号，验证邮箱，之后New Repository ，注意：
 Repository name 必须是 your_username.github.io (这里your_username替换成你自己的
@@ -160,7 +165,7 @@ Repository name 必须是 your_username.github.io (这里your_username替换成�
 下面选项默认即可，点击 Create Repository 之后 ，什么都不要做了。
 </code></pre>
 
-<h1>3.设置 SSH keys</h1>
+<h3>3.设置 SSH keys</h3>
 
 <pre><code>绑定Github与本地电脑，不用每次都输入用户名密码，如果不设置，后面可能出现错误。
 首先，本地创建一个SSH key ， 打开cmd执行：
@@ -174,7 +179,7 @@ Title任意。
 ssh -T git@github.com 
 </code></pre>
 
-<h1>4.设置个人信息</h1>
+<h3>4.设置个人信息</h3>
 
 <pre><code>$ git config --global user.name "your_username"
 $ git config --global user.email "your_email@your_email.com"
@@ -184,7 +189,7 @@ $ git config --global user.email "your_email@your_email.com"
 
 <h2>三、发布博客到Github</h2>
 
-<h1>1.先吃个饭，回来接着。。</h1>
+<h3>1.先吃个饭，回来接着。。</h3>
 </div>
 
 
