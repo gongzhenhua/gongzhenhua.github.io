@@ -4,7 +4,7 @@
   <title><![CDATA[Gongzhenhua's Blog]]></title>
   <link href="http://gongzhenhua.github.io/atom.xml" rel="self"/>
   <link href="http://gongzhenhua.github.io/"/>
-  <updated>2014-06-24T16:14:06+08:00</updated>
+  <updated>2014-06-24T16:29:45+08:00</updated>
   <id>http://gongzhenhua.github.io/</id>
   <author>
     <name><![CDATA[gongzhenhua]]></name>
@@ -120,7 +120,7 @@ Repository name 必须是 your_username.github.io (这里your_username替换成�
 $ git config --global user.email "your_email@your_email.com"
 </code></pre>
 
-<p>请自行替换 your_username 为 你注册的帐号，替换 <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#111;&#58;&#x79;&#x6f;&#117;&#x72;&#x5f;&#101;&#109;&#97;&#x69;&#108;&#64;&#x79;&#111;&#117;&#x72;&#95;&#x65;&#x6d;&#97;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#109;">&#x79;&#x6f;&#x75;&#114;&#x5f;&#x65;&#x6d;&#97;&#105;&#108;&#x40;&#121;&#111;&#x75;&#x72;&#x5f;&#101;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#111;&#x6d;</a>
+<p>请自行替换 your_username 为 你注册的帐号，替换 <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#x79;&#x6f;&#x75;&#114;&#x5f;&#x65;&#109;&#97;&#x69;&#108;&#x40;&#x79;&#x6f;&#x75;&#x72;&#95;&#101;&#x6d;&#97;&#105;&#108;&#46;&#x63;&#x6f;&#x6d;">&#x79;&#111;&#117;&#114;&#x5f;&#101;&#109;&#x61;&#105;&#x6c;&#x40;&#x79;&#111;&#117;&#114;&#95;&#x65;&#109;&#97;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#109;</a>
 为 你验证的邮箱。</p>
 
 <h2>三、发布博客到Github</h2>
@@ -261,13 +261,14 @@ rake deploy
 <p>打开目录Octopress\source_includes\post，创建duoshuo.html，把上面代码粘贴。
 打开目录Octopress\source_layouts，打开post.html，在disqus布局，如下：</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'></span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>后面加入多说的布局，如下：</p>
