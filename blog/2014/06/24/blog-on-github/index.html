@@ -196,7 +196,7 @@ Repository name 必须是 your_username.github.io (这里your_username替换成�
 $ git config --global user.email "your_email@your_email.com"
 </code></pre>
 
-<p>请自行替换 your_username 为 你注册的帐号，替换 <a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#x6f;&#58;&#x79;&#x6f;&#117;&#x72;&#95;&#x65;&#x6d;&#x61;&#x69;&#108;&#x40;&#x79;&#111;&#x75;&#x72;&#x5f;&#x65;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#111;&#109;">&#x79;&#111;&#x75;&#x72;&#95;&#101;&#x6d;&#97;&#x69;&#108;&#64;&#x79;&#111;&#x75;&#114;&#95;&#101;&#109;&#97;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#x6d;</a>
+<p>请自行替换 your_username 为 你注册的帐号，替换 <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#111;&#58;&#x79;&#x6f;&#117;&#x72;&#x5f;&#101;&#109;&#97;&#x69;&#108;&#64;&#x79;&#111;&#117;&#x72;&#95;&#x65;&#x6d;&#97;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#109;">&#x79;&#x6f;&#x75;&#114;&#x5f;&#x65;&#x6d;&#97;&#105;&#108;&#x40;&#121;&#111;&#x75;&#x72;&#x5f;&#101;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#111;&#x6d;</a>
 为 你验证的邮箱。</p>
 
 <h2>三、发布博客到Github</h2>
@@ -296,36 +296,55 @@ rake deploy
 <p>Octopress自带disqus评论系统，一般国内用的比较多的是多说<a href="http://duoshuo.com/">http://duoshuo.com/</a>
 获取代码 如下：</p>
 
-<pre><code>&lt;!-- 多说评论框 start --&gt;
-&lt;div class="ds-thread" data-thread-key="唯一ID自己定义" data-title=" 文章标题"
-data-url="文章Url"&gt;&lt;/div&gt;
-&lt;!-- 多说评论框 end --&gt;
-&lt;!-- 多说公共JS代码 start (一个网页只需插入一次) --&gt;
-&lt;script type="text/javascript"&gt;
-    var duoshuoQuery = {short_name:"gongzhenhua"};
-    (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') 
-        + '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0] 
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-&lt;/script&gt;
-&lt;!-- 多说公共JS代码 end --&gt;
-</code></pre>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;!-- 多说评论框 start --&gt;
+</span><span class='line'>&lt;div class="ds-thread" data-thread-key="唯一ID自己定义" data-title=" 文章标题"
+</span><span class='line'>data-url="文章Url"&gt;&lt;/div&gt;
+</span><span class='line'>&lt;!-- 多说评论框 end --&gt;
+</span><span class='line'>&lt;!-- 多说公共JS代码 start (一个网页只需插入一次) --&gt;
+</span><span class='line'>&lt;script type="text/javascript"&gt;
+</span><span class='line'>  var duoshuoQuery = {short_name:"gongzhenhua"};
+</span><span class='line'>  (function() {
+</span><span class='line'>      var ds = document.createElement('script');
+</span><span class='line'>      ds.type = 'text/javascript';ds.async = true;
+</span><span class='line'>      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') 
+</span><span class='line'>      + '//static.duoshuo.com/embed.js';
+</span><span class='line'>      ds.charset = 'UTF-8';
+</span><span class='line'>      (document.getElementsByTagName('head')[0] 
+</span><span class='line'>       || document.getElementsByTagName('body')[0]).appendChild(ds);
+</span><span class='line'>  })();
+</span><span class='line'>&lt;/script&gt;
+</span><span class='line'>&lt;!-- 多说公共JS代码 end --&gt;</span></code></pre></td></tr></table></div></figure>
+
 
 <p>打开目录Octopress\source_includes\post，创建duoshuo.html，把上面代码粘贴。
 打开目录Octopress\source_layouts，打开post.html，在disqus布局，如下：</p>
 
-<pre><code>{   % if site.disqus_short_name and page.comments == true %   }
-  &lt;section&gt;
-    &lt;h1&gt;Comments&lt;/h1&gt;
-    &lt;div id="disqus_thread" aria-live="polite"&gt;{   % include post/disqus_thread.html %   }&lt;/div&gt;
-  &lt;/section&gt;
-{   % endif %   }
-</code></pre>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'></span></code></pre></td></tr></table></div></figure>
+
 
 <p>后面加入多说的布局，如下：</p>
 
